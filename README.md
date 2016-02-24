@@ -25,7 +25,7 @@ spec/leap_year_spec.js // Test
 lib/leap_year_.js   // Thing We Are Testing
 ```
 
-## Making The Test
+## Wiring Things Up
 
 In spec folder, set up a variable referencing the code that will be tested:
 
@@ -41,4 +41,25 @@ describe('Miles', function () {
     expect(somefunction()).toEqual('running stuff for realsies.')
   });
 })
+```
+
+Set up a dummy function in order to check if things are wired correctly:
+
+```
+module.exports = {
+  someFunction: function () {
+    return 'running stuff for realsies.'
+  }
+}
+
+```
+
+This should yield a green result. (Run jasmine with $ jasmine) :
+```
+Started
+.
+
+
+1 spec, 0 failures
+Finished in 0.007 seconds
 ```
